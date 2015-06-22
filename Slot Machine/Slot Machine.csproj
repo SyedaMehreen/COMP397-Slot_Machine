@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\game.css" />
+    <Content Include="images\arrow_down.png" />
+    <Content Include="images\arrow_up.png" />
     <Content Include="images\bet_max.png" />
     <Content Include="images\bet_one.png" />
     <Content Include="images\casino_bg.jpg" />
