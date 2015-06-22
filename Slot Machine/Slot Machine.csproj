@@ -71,8 +71,8 @@
     <Content Include="images\casino_bg.jpg" />
     <Content Include="images\slot_machine_face.png" />
     <Content Include="index.html" />
-    <Content Include="js\jquery.js" />
-    <Content Include="js\main.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
