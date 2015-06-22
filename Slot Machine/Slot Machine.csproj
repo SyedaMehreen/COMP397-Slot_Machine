@@ -68,10 +68,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\game.css" />
+    <Content Include="images\bet_max.png" />
+    <Content Include="images\bet_one.png" />
     <Content Include="images\casino_bg.jpg" />
+    <Content Include="images\power.png" />
+    <Content Include="images\reels\banana.png" />
+    <Content Include="images\reels\bar.png" />
+    <Content Include="images\reels\bell.png" />
+    <Content Include="images\reels\blank.png" />
+    <Content Include="images\reels\cherry.png" />
+    <Content Include="images\reels\grapes.png" />
+    <Content Include="images\reels\orange.png" />
+    <Content Include="images\reels\seven.png" />
+    <Content Include="images\reset.png" />
     <Content Include="images\slot_machine_face.png" />
+    <Content Include="images\spin.png" />
+    <Content Include="images\spin_button.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
+    <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
+    <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
+    <Content Include="Scripts\lib\tweenjs-0.6.0.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -80,6 +98,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\game.ts" />
+    <TypeScriptCompile Include="Scripts\lib\createjs-lib.d.ts" />
+    <TypeScriptCompile Include="Scripts\lib\easeljs.d.ts" />
+    <TypeScriptCompile Include="Scripts\lib\preloadjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\lib\tweenjs.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
