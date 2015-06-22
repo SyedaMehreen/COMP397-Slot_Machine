@@ -5,11 +5,13 @@
 
 body {
     background-image: url('../images/casino_bg.jpg');
-    background-size:cover;
+    background-size:   cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
     
-    float:right;
+    margin-left: 35%;
 }
 
 #canvas {
-    border: dashed 1px black;
+    
 }

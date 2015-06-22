@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\digital-7.ttf" />
+    <Content Include="Documentation\External Game Document - Syeda Mehreen - 822756748.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -73,7 +74,6 @@
     <Content Include="images\arrow_up.png" />
     <Content Include="images\bet_max.png" />
     <Content Include="images\bet_one.png" />
-    <Content Include="images\casino_bg.jpg" />
     <Content Include="images\power.png" />
     <Content Include="images\reels\banana.png" />
     <Content Include="images\reels\bar.png" />
@@ -84,6 +84,7 @@
     <Content Include="images\reels\hearts.png" />
     <Content Include="images\reels\seven.png" />
     <Content Include="images\reset.png" />
+    <Content Include="images\casino_bg.jpeg" />
     <Content Include="images\slot_machine_face.png" />
     <Content Include="images\spin.png" />
     <Content Include="images\spin_button.png" />
@@ -93,7 +94,6 @@
     <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\tweenjs-0.6.0.min.js" />
-    <Content Include="Scripts\main.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +107,7 @@
     <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\tweenjs.d.ts" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
