@@ -94,6 +94,8 @@ var betMaxButton: Button;
 var betOneButton: Button;
 var resetButton: Button;
 var powerButton: Button;
+var betIncButton: Button;
+var betDecButton: Button;
 
 
 // FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -116,11 +118,17 @@ function init() {
 function labels() {
 
     var canvas: any = document.getElementById("canvas");
+
     var text1 = canvas.getContext("2d");
     text1.fillStyle = "red";
     text1.font = "48px digital-7";
     text1.fillText("Ca$h : " + playerMoney, 30, 90);
     text1.fillText("Bet  : " + playerBet, 30, 130);
+
+    var text2 = canvas.getContext("2d");
+    text2.fillStyle = "black";
+    text2.font = "18px Arial";
+    text2.fillText("Change bet amount : ", 90, 442);
 
 }
 
@@ -352,6 +360,61 @@ function powerButtonClicked(event: createjs.MouseEvent) {
     window.close();
 }
 
+function betIncButtonClicked(event: createjs.MouseEvent) {
+
+    if (playerBet >= playerMoney)
+        alert("You are not allowed to bet more than this.");
+    else {
+        playerBet = playerBet + 10;
+        gameLoop();
+    }
+}
+
+function betDecButtonClicked(event: createjs.MouseEvent) {
+
+    if (playerBet <= 10)
+        alert("You are not allowed to bet bellow this.");
+    else {
+        playerBet = playerBet - 10;
+        gameLoop();
+    }
+}
+
+function betOneButtonClicked(event: createjs.MouseEvent) {
+
+    playerBet = 10;
+    spinResult = Reels();
+    fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
+
+    determineWinnings();
+    turn++;
+
+    // Iterate over the number of reels
+    for (var index = 0; index < NUM_REELS; index++) {
+        reelContainers[index].removeAllChildren();
+        tiles[index] = new createjs.Bitmap("images/reels/" + spinResult[index] + ".png");
+        reelContainers[index].addChild(tiles[index]);
+    }
+}
+
+function betMaxButtonClicked(event: createjs.MouseEvent) {
+
+    playerBet = playerMoney;
+    spinResult = Reels();
+    fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
+
+    determineWinnings();
+    turn++;
+
+    // Iterate over the number of reels
+    for (var index = 0; index < NUM_REELS; index++) {
+        reelContainers[index].removeAllChildren();
+        tiles[index] = new createjs.Bitmap("images/reels/" + spinResult[index] + ".png");
+        reelContainers[index].addChild(tiles[index]);
+    }
+}
+
+
 
 function createUI() {
 
@@ -385,13 +448,13 @@ function createUI() {
     // Bet Max Button
     betMaxButton = new Button("images/bet_max.png", 290, 470);
     game.addChild(betMaxButton.getImage());
-    betMaxButton.getImage().addEventListener("click", spinButtonClicked);
+    betMaxButton.getImage().addEventListener("click", betMaxButtonClicked);
 
 
     // Bet One Button
     betOneButton = new Button("images/bet_one.png", 195, 470);
     game.addChild(betOneButton.getImage());
-    betOneButton.getImage().addEventListener("click", spinButtonClicked);
+    betOneButton.getImage().addEventListener("click", betOneButtonClicked);
 
 
     // Reset Button
@@ -403,6 +466,16 @@ function createUI() {
     powerButton = new Button("images/power.png", 5, 470);
     game.addChild(powerButton.getImage());
     powerButton.getImage().addEventListener("click", powerButtonClicked);
+
+    // Bet increase Button
+    betIncButton = new Button("images/arrow_up.png", 270, 420);
+    game.addChild(betIncButton.getImage());
+    betIncButton.getImage().addEventListener("click", betIncButtonClicked);
+
+    // Bet decrease Button
+    betDecButton = new Button("images/arrow_down.png", 320, 420);
+    game.addChild(betDecButton.getImage());
+    betDecButton.getImage().addEventListener("click", betDecButtonClicked);
 
 }
 
