@@ -67,15 +67,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\main.css" />
+    <Content Include="css\game.css" />
     <Content Include="images\casino_bg.jpg" />
     <Content Include="images\slot_machine_face.png" />
+    <Content Include="index.html" />
     <Content Include="js\jquery.js" />
     <Content Include="js\main.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\game.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
